@@ -33,7 +33,7 @@ const Single = () => {
 
         <h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat
-          autem aperiam officiis nesciunt quae!{" "}
+          autem aperiam officiis nesciunt quae!
         </h1>
 
         <p>
