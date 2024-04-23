@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { API_BASE } from "../components/api/api";
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -25,7 +26,7 @@ const Login = () => {
       setInputs("");
     } catch (err) {
       console.log(err.message);
-      setError(err.response.data);
+      //setError(err.response.data[0]);
     }
   };
 
