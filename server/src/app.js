@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoutes from "../routes/auth.js";
-//import userRoutes from "../routes/users.js";
 import postRoutes from "../routes/posts.js";
 
 const app = express();
@@ -17,7 +16,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(authRoutes);
-//app.use(userRoutes);
 app.use(postRoutes);
 
 app.listen(PORT, () => {

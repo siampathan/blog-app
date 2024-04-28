@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { API_BASE } from "../components/api/api";
 
@@ -31,11 +31,12 @@ const Home = () => {
   //   },
   // ];
   const [posts, setPosts] = useState([]);
+  const cat = useLocation().search;
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(`${API_BASE}/post`);
+        const response = await axios.get(`${API_BASE}/post${cat}`);
         setPosts(response.data);
       } catch (err) {
         console.log(err.message);
@@ -43,7 +44,7 @@ const Home = () => {
     };
 
     getData();
-  }, []);
+  }, [cat]);
 
   return (
     <div className="home">
