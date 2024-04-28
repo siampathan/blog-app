@@ -69,7 +69,7 @@ const Single = () => {
         <p>{post.des}</p>
       </div>
 
-      <Menu />
+      <Menu cat={post.cat} />
     </div>
   );
 };
